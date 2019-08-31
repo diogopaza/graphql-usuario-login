@@ -1,0 +1,30 @@
+type Usuario{
+
+    id: ID!
+    nome: String!
+    email: String!
+    password: String!
+
+}
+
+input NovoUsuario{
+
+    id: ID!
+    nome: String!
+    email: String!
+    password: String!
+
+}
+
+type Query{
+
+    Usuarios:[Usuario]
+    Login(email: String!, password: String!): Usuario    
+       
+
+}
+
+type Mutation{
+
+    criarUsuario(input: NovoUsuario!): Usuario!
+}
